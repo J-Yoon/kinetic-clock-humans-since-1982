@@ -1,135 +1,149 @@
-# ClockClock 24 - 아날로그 시계 모듈 애니메이션
+# ClockClock 24 - Analog Clock Module Animation
 
-![ClockClock 24](https://img.shields.io/badge/ClockClock-24-blue) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![ClockClock 24](https://img.shields.io/badge/ClockClock-24-blue) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Cursor AI](https://img.shields.io/badge/Made%20with-Cursor%20AI-00D4FF?logo=cursor&logoColor=white)
 
-YouTube 스타일의 ClockClock 24 시계를 웹에서 구현한 예술적 시계 애니메이션입니다. 24개의 아날로그 시계 모듈이 조합되어 디지털 시간을 표시합니다.
+A web implementation of the YouTube-style ClockClock 24, featuring an artistic clock animation where 24 analog clock modules combine to display digital time. Built with Cursor AI for modern web development.
 
-## ✨ 특징
+## ✨ Features
 
-- **24개 시계 모듈**: 4개 digit × 각 6개 시계 (3×2 격자)
-- **실시간 시간 표시**: 매 분마다 현재 시간으로 정렬
-- **부드러운 애니메이션**: 10초 duration의 우아한 바늘 움직임
-- **특수 상태**: 해피/뉴트럴 모드 지원
-- **반응형 디자인**: 다양한 화면 크기에 자동 적응
-- **순수 웹 기술**: HTML/CSS/JavaScript만 사용
+- **24 Clock Modules**: 4 digits × 6 clocks each (3×2 grid)
+- **Real-time Display**: Aligns to current time every minute with 10-second transition buffer
+- **Smooth Animation**: Elegant 10-second hand movement transitions with cubic-bezier easing
+- **Special States**: Happy/Neutral/Midnight mode support
+- **SVG-based Hands**: Dynamic SVG path generation for precise clock hands
+- **Responsive Design**: Auto-adapts to various screen sizes
+- **Pure Web Technologies**: HTML/CSS/JavaScript only, no external dependencies
 
-## 🎮 인터랙션
+## 🎮 Interactions
 
-### 키보드 단축키
-- **H키**: 해피 상태 (10:30)
-- **N키**: 뉴트럴 상태 (1:30)
+### Keyboard Shortcuts
+- **H Key**: Happy state (22:30 - 7:30)
+- **N Key**: Neutral state (7:30 - 7:30)
+- **Y Key**: Midnight state (24:00 display)
 
-### 마우스 조작
-- **좌측 하단 클릭**: 해피 상태
-- **우측 하단 클릭**: 뉴트럴 상태
-- **시계 영역 클릭**: 전체 화면 토글
+### Mouse Controls
+- **Clock Area Click**: Fullscreen toggle with text hiding
 
-## 🚀 시작하기
+## 🚀 Getting Started
 
-### 설치
+### Installation
 ```bash
-# 저장소 클론
+# Clone the repository
 git clone https://github.com/your-username/clock-clock-24.git
 
-# 프로젝트 디렉토리로 이동
+# Navigate to project directory
 cd clock-clock-24
 ```
 
-### 실행
+### Running
 ```bash
-# 로컬 서버 실행 (Python 3)
+# Start local server (Python 3)
 python3 -m http.server 8000
 
-# 또는 Node.js 사용
+# Or using Node.js
 npx http-server
 
-# 브라우저에서 접속
+# Open in browser
 open http://localhost:8000
 ```
 
-## 📁 프로젝트 구조
+## 📁 Project Structure
 
 ```
 clock-clock-24/
-├── index.html          # 메인 HTML 파일
-├── style.css           # 스타일시트
-├── script.js           # JavaScript 로직
-├── README.md           # 프로젝트 문서
-└── assets/             # 추가 리소스 (선택사항)
+├── index.html          # Main HTML file (minimal structure)
+├── style.css           # Complete stylesheet with animations
+├── script.js           # JavaScript logic with angle tables
+└── README.md           # Project documentation
 ```
 
-## 🎨 디자인 특징
+## 🎨 Design Features
 
-### 시각적 스타일
-- **배경**: 깔끔한 흰색 배경
-- **시계 패널**: 검정색 매트한 질감
-- **시계 원형**: 움푹 파인 듯한 3D 효과
-- **바늘**: 굵고 밝은 흰색 바늘
-- **애니메이션**: 10초 duration의 부드러운 전환
+### Visual Style
+- **Background**: Clean white background (#fff)
+- **Clock Panel**: Black matte texture (#000) with subtle overlay
+- **Clock Circles**: Dark gray (#1a1a1a) with matte finish
+- **Hands**: Thick white SVG hands (12px width) with glow effects
+- **Animation**: Smooth 10-second transitions with cubic-bezier(0.4, 0.0, 0.2, 1)
 
-### 반응형 브레이크포인트
-- **데스크톱**: 70px 시계, 8px 간격
-- **태블릿**: 55px 시계, 6px 간격  
-- **모바일**: 45px 시계, 4px 간격
+### Technical Implementation
+- **SVG Generation**: Dynamic SVG path creation for clock hands
+- **Angle Tables**: Precise hour/minute angle mapping for each digit (0-9)
+- **CSS Variables**: Custom properties for hand positioning
+- **Transform Origin**: 50% 50% for smooth rotation animations
 
-## ⚙️ 기술 스택
+## ⚙️ Tech Stack
 
-- **HTML5**: 시맨틱 마크업
+- **HTML5**: 
+  - Semantic markup with minimal structure
+  - Dark color scheme meta tag
+  - Responsive viewport configuration
 - **CSS3**: 
-  - CSS Grid 레이아웃
-  - CSS 변수 시스템
-  - Transform 애니메이션
-  - Box-shadow 3D 효과
+  - CSS Grid layout for digit arrangement
+  - CSS custom properties for animations
+  - Transform animations with cubic-bezier easing
+  - Box-shadow 3D effects and hover states
+  - Fullscreen mode support
 - **JavaScript (ES6+)**:
-  - 클래스 기반 구조
-  - SVG 동적 생성
-  - 실시간 시간 동기화
+  - Dynamic SVG DOM generation
+  - Real-time time synchronization with 10-second buffer
+  - Angle calculation functions (hourToDegrees, minuteToDegrees)
+  - Special state management (Happy/Neutral/Midnight)
 
-## 🔧 커스터마이징
+## 🔧 Customization
 
-### 시계 바늘 속도 조정
+### Adjust Clock Hand Speed
 ```css
 .clock-smallHand,
 .clock-largeHand {
     transition: transform 10s cubic-bezier(0.4, 0.0, 0.2, 1);
-    /* duration 값을 변경하여 속도 조정 */
+    /* Change duration value to adjust speed */
 }
 ```
 
-### 색상 테마 변경
+### Change Color Theme
 ```css
 :root {
-    --primary-bg: #fff;        /* 배경색 */
-    --clock-bg: #1a1a1a;       /* 시계 배경 */
-    --hand-color: #fff;        /* 바늘 색상 */
-    --text-color: #333;        /* 텍스트 색상 */
+    --primary-bg: #fff;        /* Background color */
+    --clock-bg: #1a1a1a;       /* Clock background */
+    --hand-color: #fff;        /* Hand color */
+    --text-color: #333;        /* Text color */
 }
 ```
 
-### 시계 크기 조정
+### Modify Clock Size
 ```css
 .clock {
-    width: 70px;   /* 시계 크기 */
+    width: 70px;   /* Clock size */
     height: 70px;
 }
 ```
 
-## 🌟 사용 사례
+### Adjust Hand Thickness
+```css
+.clock-smallHand,
+.clock-largeHand {
+    width: 12px;   /* Hand thickness */
+}
+```
 
-- **Wallpaper Engine**: 동적 배경화면
-- **Chrome New Tab Extension**: 새 탭 페이지
-- **디지털 사이니지**: 공공장소 디스플레이
-- **예술적 웹사이트**: 포트폴리오 요소
-- **교육용**: 시간 개념 시각화
+## 🌟 Use Cases
 
-## 📱 브라우저 지원
+- **Wallpaper Engine**: Dynamic desktop wallpaper
+- **Chrome New Tab Extension**: New tab page
+- **Digital Signage**: Public display systems
+- **Artistic Websites**: Portfolio elements
+- **Educational**: Time concept visualization
+- **Screen Savers**: Elegant time display
+
+## 📱 Browser Support
 
 - ✅ Chrome 60+
 - ✅ Firefox 55+
 - ✅ Safari 12+
 - ✅ Edge 79+
 
-## 🤝 기여하기
+## 🤝 Contributing
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -137,20 +151,26 @@ clock-clock-24/
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 라이선스
+## 📄 License
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
+This project is released into the **Public Domain**. You are free to use, modify, distribute, and even sell this code without any restrictions. No attribution is required, though it's always appreciated.
 
-## 🙏 감사의 말
+**What this means:**
+- ✅ Use in commercial projects
+- ✅ Modify and redistribute
+- ✅ Include in proprietary software
+- ✅ No license fees or restrictions
+- ✅ No warranty or liability
 
-- **Humans since 1982**: 원본 ClockClock 24 디자인 영감
-- **YouTube**: 스타일 참고
-- **Web Standards**: 순수 웹 기술 구현
+## 🙏 Acknowledgments
 
-## 📞 연락처
+- **Humans since 1982**: Original ClockClock 24 design inspiration
+- **manu.ninja**: Angle table logic and implementation reference
+- **YouTube**: Style and interaction reference
+- **Cursor AI**: Development assistance and code generation
+- **Web Standards**: Pure web technology implementation
 
-프로젝트 링크: [https://github.com/your-username/clock-clock-24](https://github.com/your-username/clock-clock-24)
 
----
+⭐ If this project helped you, please give it a star!
 
-⭐ 이 프로젝트가 도움이 되었다면 스타를 눌러주세요!
+**Made with ❤️ and Cursor AI**
